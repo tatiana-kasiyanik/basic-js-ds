@@ -41,6 +41,9 @@ class Queue {
     } else {
       let result = this.head.value;
       this.head = this.head.next;
+      if (this.head === null) {
+        this.tail = null;
+      }
       return result;
     }
   }
